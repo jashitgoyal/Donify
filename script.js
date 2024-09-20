@@ -39,3 +39,9 @@ window.addEventListener("scroll", function () {
     ? header.classList.add("active")
     : header.classList.remove("active");
 });
+
+const getStarted = document.getElementById("nav-cta");
+
+getStarted.addEventListener("click", () => {
+  window.open("/Login/login.html");
+});

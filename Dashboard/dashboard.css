@@ -1,9 +1,0 @@
-.dashboard {
-  background-color: brown;
-  display: flex;
-  flex-direction: row;
-}
-
-.sorter {
-  background-color: cyan;
-}

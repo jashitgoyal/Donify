@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Donation Platform</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Support NGOs in Need</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search NGOs or causes..."
+        />
+      </div>
+      <div class="filter-container">
+        <label for="price-filter">Max Amount (₹):</label>
+        <input
+          type="range"
+          id="price-filter"
+          min="0"
+          max="10000"
+          step="100"
+          value="5000"
+        />
+        <span id="price-value">₹5000</span>
+
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="Child Welfare">Child Welfare</option>
+          <option value="Environmental">Environmental</option>
+          <option value="Education">Education</option>
+          <option value="Water & Sanitation">Water & Sanitation</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Animal Welfare">Animal Welfare</option>
+          <option value="Women Empowerment">Women Empowerment</option>
+          <option value="Disaster Relief">Disaster Relief</option>
+        </select>
+
+        <label for="location-filter">Location:</label>
+        <select id="location-filter">
+          <option value="all">All Locations</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Assam">Assam</option>
+        </select>
+      </div>
+    </header>
+
+    <section id="donation-cards">
+      <!-- Cards will be dynamically generated here -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

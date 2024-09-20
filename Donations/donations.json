@@ -1,0 +1,66 @@
+[
+  {
+    "ngoName": "Helping Hands",
+    "description": "Providing food and shelter for orphaned children in rural areas.",
+    "amount": 2500,
+    "deadline": "2024-12-01",
+    "location": "Punjab",
+    "category": "Child Welfare"
+  },
+  {
+    "ngoName": "Green Earth",
+    "description": "Planting trees and preserving green belts to combat deforestation.",
+    "amount": 5000,
+    "deadline": "2024-10-15",
+    "location": "Kerala",
+    "category": "Environmental"
+  },
+  {
+    "ngoName": "Educate All",
+    "description": "Supporting underprivileged students with scholarships and school supplies.",
+    "amount": 8000,
+    "deadline": "2024-11-05",
+    "location": "Delhi",
+    "category": "Education"
+  },
+  {
+    "ngoName": "Water for Life",
+    "description": "Building wells and clean water facilities in drought-affected regions.",
+    "amount": 1500,
+    "deadline": "2024-09-30",
+    "location": "Rajasthan",
+    "category": "Water & Sanitation"
+  },
+  {
+    "ngoName": "Hope Health",
+    "description": "Providing basic healthcare and medical supplies to remote villages.",
+    "amount": 10000,
+    "deadline": "2024-12-20",
+    "location": "Himachal Pradesh",
+    "category": "Healthcare"
+  },
+  {
+    "ngoName": "Animal Rescue Trust",
+    "description": "Rescuing and rehabilitating stray animals in urban areas.",
+    "amount": 3000,
+    "deadline": "2024-09-25",
+    "location": "Mumbai",
+    "category": "Animal Welfare"
+  },
+  {
+    "ngoName": "Women Empowerment Foundation",
+    "description": "Providing vocational training and financial aid to women in rural areas.",
+    "amount": 6000,
+    "deadline": "2024-10-01",
+    "location": "Uttar Pradesh",
+    "category": "Women Empowerment"
+  },
+  {
+    "ngoName": "Relief First",
+    "description": "Immediate disaster relief supplies and food for flood victims.",
+    "amount": 7000,
+    "deadline": "2024-11-10",
+    "location": "Assam",
+    "category": "Disaster Relief"
+  }
+]
