@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeModal = document.querySelector(".close");
   const donationForm = document.getElementById("donation-form");
 
+  // Initialize donations array
+  let donations = [];
+
+  // Load initial data
+  loadDonations();
+
   // Event Listeners for Modal
   addDonationBtn.addEventListener("click", () => {
     addDonationModal.style.display = "block";
@@ -24,9 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Load initial data
-  loadDonations();
-
   // Handle donation form submission
   donationForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -37,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       amount: parseInt(document.getElementById("amount").value),
       deadline: document.getElementById("deadline").value,
       location: document.getElementById("location").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
       category: document.getElementById("category").value,
     };
 
@@ -48,63 +52,55 @@ document.addEventListener("DOMContentLoaded", function () {
     loadDonations(); // Refresh the list
   });
 
-  // Manage Donations
-  manageDonationsBtn.addEventListener("click", loadDonations);
-
-  // Track Donations
-  trackDonationsBtn.addEventListener("click", trackDonations);
-
   // Load donations from local storage
   function loadDonations() {
-    const storedDonations = JSON.parse(localStorage.getItem("donations")) || [];
-    dashboardContent.innerHTML = "<h2>Manage Your Donations</h2>";
-
-    // Create a list of donations
-    const donationList = document.createElement("ul");
-    storedDonations.forEach((donation, index) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${donation.ngoName}: ${donation.description} - ₹${donation.amount}`;
-      donationList.appendChild(listItem);
-
-      // Add a remove button for each donation
-      const removeButton = document.createElement("button");
-      removeButton.textContent = "Remove";
-      removeButton.addEventListener("click", () => {
-        removeDonation(index);
-      });
-      listItem.appendChild(removeButton);
-    });
-
-    dashboardContent.appendChild(donationList);
+    const storedDonations = localStorage.getItem("donations");
+    if (storedDonations) {
+      donations = JSON.parse(storedDonations); // Load from local storage
+      displayAnalytics();
+      displayDonations();
+    }
   }
 
   // Save donation to local storage
   function saveDonation(donation) {
-    const storedDonations = JSON.parse(localStorage.getItem("donations")) || [];
-    storedDonations.push(donation);
-    localStorage.setItem("donations", JSON.stringify(storedDonations)); // Update local storage
+    donations.push(donation);
+    localStorage.setItem("donations", JSON.stringify(donations));
   }
 
-  // Remove donation from local storage
-  function removeDonation(index) {
-    const storedDonations = JSON.parse(localStorage.getItem("donations")) || [];
-    storedDonations.splice(index, 1); // Remove the donation
-    localStorage.setItem("donations", JSON.stringify(storedDonations)); // Update local storage
-    loadDonations(); // Refresh the list
-  }
+  // Display analytics for specific NGO
+  function displayAnalytics() {
+    const ngoName = donations[0]?.ngoName; // Assuming all donations are from the same NGO
+    const filteredDonations = donations.filter(
+      (donation) => donation.ngoName === ngoName
+    );
 
-  // Track donations (simple statistics)
-  function trackDonations() {
-    const storedDonations = JSON.parse(localStorage.getItem("donations")) || [];
-    dashboardContent.innerHTML = "<h2>Track Donations</h2>";
-
-    const totalDonations = storedDonations.length;
-    const totalAmount = storedDonations.reduce(
+    const totalDonations = filteredDonations.length;
+    const totalAmount = filteredDonations.reduce(
       (acc, donation) => acc + donation.amount,
       0
     );
 
-    dashboardContent.innerHTML += `<p>Total Donations: ${totalDonations}</p>`;
-    dashboardContent.innerHTML += `<p>Total Amount Requested: ₹${totalAmount}</p>`;
+    document.getElementById("total-donations").textContent = totalDonations;
+    document.getElementById("total-amount").textContent = `₹${totalAmount}`;
+    document.getElementById("pending-donations").textContent = totalDonations; // Adjust if needed
+  }
+
+  // Display donations made by the specific NGO
+  function displayDonations() {
+    const ngoName = donations[0]?.ngoName; // Assuming all donations are from the same NGO
+    const filteredDonations = donations.filter(
+      (donation) => donation.ngoName === ngoName
+    );
+
+    dashboardContent.innerHTML += "<h2>Donation Requests</h2>";
+    filteredDonations.forEach((donation) => {
+      dashboardContent.innerHTML += `
+                  <div class="donation-item">
+                      <h3>${donation.ngoName} (${donation.category})</h3>
+                      <p>${donation.description}</p>
+                      <p>Amount: ₹${donation.amount} | Deadline: ${donation.deadline}</p>
+                  </div>`;
+    });
   }
 });

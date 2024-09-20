@@ -57,6 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <p><strong>Deadline:</strong> ${donation.deadline}</p>
               <p><strong>Location:</strong> ${donation.location}</p>
               <p><strong>Category:</strong> ${donation.category}</p>
+              <p><strong>Contact:</strong> 
+                <a href="tel:${donation.phoneNumber}" style="color: blue; text-decoration: underline;">
+                  ${donation.phoneNumber}
+                </a>
+              </p>
           `;
       donationCardsContainer.appendChild(card);
     });

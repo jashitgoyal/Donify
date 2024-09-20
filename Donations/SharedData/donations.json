@@ -1,66 +1,173 @@
 [
   {
-    "ngoName": "Helping Hands",
-    "description": "Providing food and shelter for orphaned children in rural areas.",
-    "amount": 2500,
-    "deadline": "2024-12-01",
-    "location": "Punjab",
-    "category": "Child Welfare"
-  },
-  {
-    "ngoName": "Green Earth",
-    "description": "Planting trees and preserving green belts to combat deforestation.",
+    "ngoName": "Help Foundation",
+    "description": "We need donations for educational supplies.",
     "amount": 5000,
-    "deadline": "2024-10-15",
-    "location": "Kerala",
-    "category": "Environmental"
-  },
-  {
-    "ngoName": "Educate All",
-    "description": "Supporting underprivileged students with scholarships and school supplies.",
-    "amount": 8000,
-    "deadline": "2024-11-05",
+    "deadline": "2024-12-31",
     "location": "Delhi",
-    "category": "Education"
+    "category": "Education",
+    "phoneNumber": "1234567890"
   },
   {
-    "ngoName": "Water for Life",
-    "description": "Building wells and clean water facilities in drought-affected regions.",
-    "amount": 1500,
-    "deadline": "2024-09-30",
-    "location": "Rajasthan",
-    "category": "Water & Sanitation"
-  },
-  {
-    "ngoName": "Hope Health",
-    "description": "Providing basic healthcare and medical supplies to remote villages.",
-    "amount": 10000,
-    "deadline": "2024-12-20",
-    "location": "Himachal Pradesh",
-    "category": "Healthcare"
-  },
-  {
-    "ngoName": "Animal Rescue Trust",
-    "description": "Rescuing and rehabilitating stray animals in urban areas.",
+    "ngoName": "Food for All",
+    "description": "Help us provide meals to the underprivileged.",
     "amount": 3000,
-    "deadline": "2024-09-25",
+    "deadline": "2024-11-15",
     "location": "Mumbai",
-    "category": "Animal Welfare"
+    "category": "Food",
+    "phoneNumber": "0987654321"
   },
   {
-    "ngoName": "Women Empowerment Foundation",
-    "description": "Providing vocational training and financial aid to women in rural areas.",
+    "ngoName": "Clean Earth",
+    "description": "Donations needed for tree plantation drives.",
+    "amount": 2000,
+    "deadline": "2024-10-10",
+    "location": "Bangalore",
+    "category": "Environment",
+    "phoneNumber": "1122334455"
+  },
+  {
+    "ngoName": "Health First",
+    "description": "Support our health awareness programs.",
+    "amount": 4000,
+    "deadline": "2024-12-20",
+    "location": "Chennai",
+    "category": "Health",
+    "phoneNumber": "2233445566"
+  },
+  {
+    "ngoName": "Support for Women",
+    "description": "Help us empower women through education.",
+    "amount": 3500,
+    "deadline": "2024-11-30",
+    "location": "Kolkata",
+    "category": "Women Empowerment",
+    "phoneNumber": "3344556677"
+  },
+  {
+    "ngoName": "Animal Rescue",
+    "description": "Help us provide shelter for abandoned animals.",
+    "amount": 4500,
+    "deadline": "2024-10-25",
+    "location": "Hyderabad",
+    "category": "Animals",
+    "phoneNumber": "4455667788"
+  },
+  {
+    "ngoName": "Literacy Initiative",
+    "description": "Support our efforts to educate children.",
     "amount": 6000,
-    "deadline": "2024-10-01",
-    "location": "Uttar Pradesh",
-    "category": "Women Empowerment"
+    "deadline": "2024-12-15",
+    "location": "Pune",
+    "category": "Education",
+    "phoneNumber": "5566778899"
   },
   {
-    "ngoName": "Relief First",
-    "description": "Immediate disaster relief supplies and food for flood victims.",
+    "ngoName": "Mental Health Matters",
+    "description": "Donations needed for mental health awareness.",
+    "amount": 3500,
+    "deadline": "2024-11-05",
+    "location": "Ahmedabad",
+    "category": "Health",
+    "phoneNumber": "6677889900"
+  },
+  {
+    "ngoName": "Youth Empowerment",
+    "description": "Help us empower youth through skill training.",
+    "amount": 4000,
+    "deadline": "2024-10-30",
+    "location": "Jaipur",
+    "category": "Youth",
+    "phoneNumber": "7788990011"
+  },
+  {
+    "ngoName": "Clean Water Initiative",
+    "description": "Support our efforts to provide clean water.",
+    "amount": 5000,
+    "deadline": "2024-12-01",
+    "location": "Lucknow",
+    "category": "Water",
+    "phoneNumber": "8899001122"
+  },
+  {
+    "ngoName": "Refugee Support",
+    "description": "Help us provide shelter and food to refugees.",
     "amount": 7000,
-    "deadline": "2024-11-10",
-    "location": "Assam",
-    "category": "Disaster Relief"
+    "deadline": "2024-11-20",
+    "location": "Coimbatore",
+    "category": "Refugees",
+    "phoneNumber": "9900112233"
+  },
+  {
+    "ngoName": "Senior Citizen Care",
+    "description": "Support programs for the elderly.",
+    "amount": 2500,
+    "deadline": "2024-10-15",
+    "location": "Nashik",
+    "category": "Elderly",
+    "phoneNumber": "1010101010"
+  },
+  {
+    "ngoName": "Disaster Relief",
+    "description": "Help us provide aid during natural disasters.",
+    "amount": 8000,
+    "deadline": "2024-12-10",
+    "location": "Varanasi",
+    "category": "Relief",
+    "phoneNumber": "2020202020"
+  },
+  {
+    "ngoName": "Health and Nutrition",
+    "description": "Support our health and nutrition programs.",
+    "amount": 3000,
+    "deadline": "2024-11-25",
+    "location": "Surat",
+    "category": "Health",
+    "phoneNumber": "3030303030"
+  },
+  {
+    "ngoName": "Environmental Awareness",
+    "description": "Help us spread awareness about environmental issues.",
+    "amount": 1500,
+    "deadline": "2024-10-05",
+    "location": "Indore",
+    "category": "Environment",
+    "phoneNumber": "4040404040"
+  },
+  {
+    "ngoName": "Cultural Heritage",
+    "description": "Support our efforts to preserve cultural heritage.",
+    "amount": 4500,
+    "deadline": "2024-11-12",
+    "location": "Agra",
+    "category": "Culture",
+    "phoneNumber": "5050505050"
+  },
+  {
+    "ngoName": "Community Development",
+    "description": "Help us develop rural communities.",
+    "amount": 6000,
+    "deadline": "2024-12-20",
+    "location": "Raipur",
+    "category": "Development",
+    "phoneNumber": "6060606060"
+  },
+  {
+    "ngoName": "Sports for All",
+    "description": "Support sports programs for underprivileged children.",
+    "amount": 2500,
+    "deadline": "2024-10-20",
+    "location": "Bhopal",
+    "category": "Sports",
+    "phoneNumber": "7070707070"
+  },
+  {
+    "ngoName": "Digital Literacy",
+    "description": "Help us teach digital skills to youth.",
+    "amount": 4000,
+    "deadline": "2024-11-30",
+    "location": "Chandigarh",
+    "category": "Education",
+    "phoneNumber": "8080808080"
   }
 ]

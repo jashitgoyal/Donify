@@ -17,6 +17,26 @@
     </header>
 
     <section id="dashboard-content">
+      <!-- Analytics Overview -->
+      <section id="dashboard-content">
+        <!-- Analytics Overview -->
+        <div class="analytics">
+          <div class="analytics-box">
+            <h3>Total Donations</h3>
+            <p id="total-donations">0</p>
+          </div>
+          <div class="analytics-box">
+            <h3>Total Amount Requested</h3>
+            <p id="total-amount">₹0</p>
+          </div>
+          <div class="analytics-box">
+            <h3>Pending Donations</h3>
+            <p id="pending-donations">0</p>
+          </div>
+        </div>
+        <!-- Content will be dynamically inserted -->
+      </section>
+
       <!-- Content will be dynamically inserted -->
     </section>
 
@@ -41,12 +61,14 @@
           <label for="location">Location:</label>
           <input type="text" id="location" required />
 
+          <label for="phoneNumber">Contact Number:</label>
+          <input type="text" id="phoneNumber" required />
+
           <label for="category">Category:</label>
           <select id="category">
             <option value="Child Welfare">Child Welfare</option>
             <option value="Environmental">Environmental</option>
             <option value="Education">Education</option>
-            <!-- Add more categories as needed -->
           </select>
 
           <button type="submit">Submit</button>
