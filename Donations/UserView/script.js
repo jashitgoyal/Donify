@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch donation data from the JSON file
   async function fetchDonations() {
     try {
-      const response = await fetch("donations.json");
+      const response = await fetch("../SharedData/donations.json");
       donations = await response.json();
       loadDonationCards();
     } catch (error) {

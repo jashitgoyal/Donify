@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Dashboard</title>
+    <link rel="stylesheet" href="ngo-style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>NGO Donation Management</h1>
+      <nav>
+        <button id="add-donation-btn">Add New Donation</button>
+        <button id="manage-donations-btn">Manage Donations</button>
+        <button id="track-donations-btn">Track Donations</button>
+      </nav>
+    </header>
+
+    <section id="dashboard-content">
+      <!-- Content will be dynamically inserted -->
+    </section>
+
+    <!-- Modal for Adding a Donation -->
+    <div id="add-donation-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Donation Request</h2>
+        <form id="donation-form">
+          <label for="ngoName">NGO Name:</label>
+          <input type="text" id="ngoName" required />
+
+          <label for="description">Description:</label>
+          <textarea id="description" required></textarea>
+
+          <label for="amount">Amount (₹):</label>
+          <input type="number" id="amount" required />
+
+          <label for="deadline">Deadline:</label>
+          <input type="date" id="deadline" required />
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" required />
+
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="Child Welfare">Child Welfare</option>
+            <option value="Environmental">Environmental</option>
+            <option value="Education">Education</option>
+            <!-- Add more categories as needed -->
+          </select>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="ngo-script.js"></script>
+  </body>
+</html>
