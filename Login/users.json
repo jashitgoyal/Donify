@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "username": "normalUser1",
+      "password": "password1",
+      "type": "normal"
+    },
+    {
+      "username": "orgUser1",
+      "password": "password1",
+      "type": "organization"
+    },
+    {
+      "username": "normalUser2",
+      "password": "password2",
+      "type": "normal"
+    },
+    {
+      "username": "orgUser2",
+      "password": "password2",
+      "type": "organization"
+    }
+  ]
+}

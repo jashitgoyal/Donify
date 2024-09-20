@@ -43,5 +43,5 @@ window.addEventListener("scroll", function () {
 const getStarted = document.getElementById("nav-cta");
 
 getStarted.addEventListener("click", () => {
-  window.open("/Login/login.html");
+  window.open("/Login/index.html");
 });

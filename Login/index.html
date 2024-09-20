@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Signup Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-toggle">
+        <button id="showLogin" class="active">Login</button>
+        <button id="showSignup">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <div class="form-container" id="loginForm">
+        <div class="form-header">
+          <h2>Login</h2>
+        </div>
+        <form id="login">
+          <label for="loginUsername">Username</label>
+          <input
+            type="text"
+            id="loginUsername"
+            placeholder="Enter your username"
+            required
+          />
+
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-container hidden" id="signupForm">
+        <div class="form-header">
+          <h2>Sign Up</h2>
+        </div>
+        <form id="signup">
+          <label for="signupUsername">Username</label>
+          <input
+            type="text"
+            id="signupUsername"
+            placeholder="Enter a username"
+            required
+          />
+
+          <label for="signupPassword">Password</label>
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Enter a password"
+            required
+          />
+
+          <div class="radio-label">
+            <input type="radio" name="userType" value="normal" required />
+            Normal User
+          </div>
+          <div class="radio-label">
+            <input type="radio" name="userType" value="organization" required />
+            Organization
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
