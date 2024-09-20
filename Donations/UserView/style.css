@@ -1,23 +1,25 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #282626;
 }
 
 header {
   padding: 20px;
-  background-color: #007bff;
+  background-color: hsl(86, 45%, 54%);
   color: white;
   text-align: center;
 }
 
 h1 {
   margin-bottom: 20px;
+  color: #000000;
 }
 
 .search-container {
   margin: 20px;
+  border: 1px solid black;
 }
 
 #search-bar {
@@ -42,10 +44,12 @@ h1 {
 
 .filter-container select,
 #price-filter {
+  accent-color: #000000;
   padding: 5px;
 }
 
 #price-value {
+  color: #000000;
   font-weight: bold;
   margin-left: 10px;
 }
@@ -60,6 +64,8 @@ h1 {
 .card {
   background-color: white;
   border-radius: 10px;
+  border: 5px solid;
+  border-color: rgb(117, 203, 117);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
@@ -73,11 +79,11 @@ h1 {
 
 .card h2 {
   margin-top: 0;
-  color: #007bff;
+  color: #32573c;
 }
 
 .card p {
-  color: #555;
+  color: #646464;
 }
 
 .card strong {
