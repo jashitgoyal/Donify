@@ -8,11 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let donations = [];
 
-  // Fetch donation data from the JSON file
-  async function fetchDonations() {
+  // Load donation data from the JSON file first
+  async function loadDonations() {
     try {
       const response = await fetch("../SharedData/donations.json");
-      donations = await response.json();
+      const jsonDonations = await response.json();
+      donations = jsonDonations; // Load from JSON first
+
+      // Now check local storage and merge if needed
+      const storedDonations = localStorage.getItem("donations");
+      if (storedDonations) {
+        const localDonations = JSON.parse(storedDonations);
+        donations = [...donations, ...localDonations]; // Merge JSON donations with local storage donations
+      }
+
       loadDonationCards();
     } catch (error) {
       console.error("Error fetching donation data:", error);
@@ -68,6 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
   categoryFilter.addEventListener("change", loadDonationCards);
   locationFilter.addEventListener("change", loadDonationCards);
 
-  // Fetch data and initially load the cards
-  fetchDonations();
+  // Load data from the JSON file and local storage, then initially load the cards
+  loadDonations();
 });
