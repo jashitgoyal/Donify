@@ -1,15 +1,29 @@
+/* General Body Styling */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: #e9f5e1; /* Soft light green background */
+  color: #2c3e50;
+  line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-  background-color: #28a745;
+  background: #4caf50; /* Darker green for header */
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 header nav {
@@ -17,110 +31,440 @@ header nav {
 }
 
 header button {
-  background-color: white;
-  color: #28a745;
-  padding: 10px 15px;
+  background-color: #388e3c; /* Green button */
+  color: white;
+  padding: 12px 20px;
   margin: 0 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header button:hover {
-  background-color: #f9f9f9;
+  background-color: #2e7d32; /* Darker green on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Dashboard Content */
 #dashboard-content {
-  padding: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+#dashboard-content h2 {
+  font-size: 2.2em;
+  color: #388e3c; /* Green for headings */
+  margin-bottom: 25px;
+}
+
+/* Analytics Section */
 .analytics {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .analytics-box {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
+  background: linear-gradient(
+    120deg,
+    #a8e6cf,
+    #dcedc1
+  ); /* Light green gradient */
+  border-radius: 15px;
+  padding: 30px;
   width: 30%;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.analytics-box:hover {
+  transform: translateY(-5px);
 }
 
 .analytics-box h3 {
-  margin: 0;
-  color: #555;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #4caf50; /* Darker green for box headings */
 }
 
 .analytics-box p {
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: bold;
-  color: #28a745;
+  color: #2c3e50;
+  margin: 0;
 }
 
+/* Modal Styling */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-  overflow: auto; /* Enable scrolling */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
 }
 
 .modal-content {
-  background-color: white;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%; /* Could be more or less, depending on screen size */
-  max-height: 80%; /* Limit the height of the modal */
-  overflow-y: auto; /* Enable vertical scrolling */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  margin: 7% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideDown 0.5s ease-in-out;
 }
 
 .modal-content h2 {
-  color: #28a745;
+  font-size: 2em;
+  color: #388e3c; /* Green for modal heading */
+  margin-bottom: 20px;
 }
 
 .modal-content form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .modal-content form label {
   font-weight: bold;
-  color: #555;
+  color: #34495e;
 }
 
 .modal-content form input,
 .modal-content form textarea,
 .modal-content form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .modal-content form input:focus,
 .modal-content form textarea:focus,
 .modal-content form select:focus {
-  border-color: #28a745;
+  border-color: #388e3c; /* Green border on focus */
   outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.modal-content form button {
+  background-color: #66bb6a; /* Light green button */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content form button:hover {
+  background-color: #4caf50; /* Darker green on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
   cursor: pointer;
+  color: #e74c3c;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #c0392b;
+}
+
+/* Button hover effect for manage/track donations */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+}
+/* General Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9f5e1; /* Soft light green background */
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background: #4caf50; /* Darker green for header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header button {
+  background-color: #388e3c; /* Green button */
+  color: white;
+  padding: 12px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header button:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Content */
+#dashboard-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#dashboard-content h2 {
+  font-size: 2.2em;
+  color: #388e3c; /* Green for headings */
+  margin-bottom: 25px;
+}
+
+/* Analytics Section */
+.analytics {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.analytics-box {
+  background: linear-gradient(
+    120deg,
+    #a8e6cf,
+    #dcedc1
+  ); /* Light green gradient */
+  border-radius: 15px;
+  padding: 30px;
+  width: 30%;
+  text-align: center;
+  color: #2c3e50;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.analytics-box:hover {
+  transform: translateY(-5px);
+}
+
+.analytics-box h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #4caf50; /* Darker green for box headings */
+}
+
+.analytics-box p {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 7% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.modal-content h2 {
+  font-size: 2em;
+  color: #388e3c; /* Green for modal heading */
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-content form label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form select {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content form input:focus,
+.modal-content form textarea:focus,
+.modal-content form select:focus {
+  border-color: #388e3c; /* Green border on focus */
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content form button {
+  background-color: #66bb6a; /* Light green button */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content form button:hover {
+  background-color: #4caf50; /* Darker green on hover */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #e74c3c;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #c0392b;
+}
+
+/* Button hover effect for manage/track donations */
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
 }

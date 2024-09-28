@@ -2,24 +2,22 @@ body {
   font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #282626;
+  background-color: #f9f9f9;
 }
 
 header {
   padding: 20px;
-  background-color: hsl(86, 45%, 54%);
+  background-color: hsla(86, 45%, 54%);
   color: white;
   text-align: center;
 }
 
 h1 {
   margin-bottom: 20px;
-  color: #000000;
 }
 
 .search-container {
   margin: 20px;
-  border: 1px solid black;
 }
 
 #search-bar {
@@ -30,6 +28,7 @@ h1 {
 }
 
 .filter-container {
+  accent-color: green;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -39,17 +38,15 @@ h1 {
 
 .filter-container label {
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
 }
 
 .filter-container select,
 #price-filter {
-  accent-color: #000000;
   padding: 5px;
 }
 
 #price-value {
-  color: #000000;
   font-weight: bold;
   margin-left: 10px;
 }
@@ -64,8 +61,8 @@ h1 {
 .card {
   background-color: white;
   border-radius: 10px;
-  border: 5px solid;
-  border-color: rgb(117, 203, 117);
+  border: #76a780 5px solid;
+  background-color: #d7efdc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
@@ -79,11 +76,11 @@ h1 {
 
 .card h2 {
   margin-top: 0;
-  color: #32573c;
+  color: #1d4f27;
 }
 
 .card p {
-  color: #646464;
+  color: #555;
 }
 
 .card strong {
