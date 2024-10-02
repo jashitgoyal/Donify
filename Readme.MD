@@ -9,6 +9,16 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
+## Start Point
+
+To start with the project, clone the repository and navigate to the project directory.
+
+Filename - index.html
+
+## Project Highlight
+
+![alt text](assets/project-img.png)
+
 ## Features
 
 - **User-Friendly Interface:** An intuitive interface that allows users to easily navigate through donation options.
