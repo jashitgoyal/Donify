@@ -2,6 +2,8 @@
 
 **Donify** is an initiative aimed at organizing donations in India, allowing organizations to post their donation needs while enabling donors to filter and contribute based on their preferences. The platform facilitates a seamless connection between NGOs and individuals, making the process of donating easier and more efficient.
 
+[Live Link ->](https://donify.vercel.app/)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -39,5 +41,5 @@ To run Donify locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/donify.git
+   git clone https://github.com/jashitgoyal/donify.git
    ```
